@@ -16,4 +16,4 @@ Step-8: Checkin all the tracked files from STAGING AREA to GIT - command --> git
 Step-9: Check the status - command --> git status
 Step-10:Push all the tracked files from Loacl repository (GIT) to Remote repository (GitHub) - command --> git push -u origin master
 Step-11: Need to provide credentials <provide username and password> to upload files to Remote repository
-Step-12:
+Step-12: To pull files from GITHUB to GIT - command --> git pull origin master

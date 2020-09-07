@@ -13,6 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
+import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -33,7 +34,7 @@ public class BaseClass {
 	public static Logger Logger;
 	
 	
-	@Parameters("browser")
+	@Parameters({"browser"})
 	@BeforeClass
 	public void setup(String br)
 	{
@@ -54,7 +55,7 @@ public class BaseClass {
 		}
 		else if (br.equalsIgnoreCase("ie"))
 		{
-			System.setProperty("webdriver.ie.driver", readconfig.getIEPath());
+			System.setProperty("webdriver.ie.driver", "C:\\Users\\kasuravikasu\\eclipse-workspace\\inetBankingV2\\Drivers\\IEDriverServer.exe");
 			driver = new InternetExplorerDriver();
 			driver.manage().window().maximize();
 		}
